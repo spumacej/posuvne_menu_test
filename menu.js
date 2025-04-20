@@ -7,3 +7,14 @@ window.addEventListener("scroll", function() {
         menu_default.style.opacity = "0"; 
     }
 });
+
+// let obrazek1 = document.getElementById("obrazek1");
+
+// window.addEventListener("scroll", function (){
+//     if (window.scrollY >= 500) {
+//         obrazek1.style.animation = true;
+//     }
+//     else {
+//         obrazek1.style.animation = false;
+//     }
+// });
