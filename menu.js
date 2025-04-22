@@ -19,10 +19,10 @@ window.addEventListener("scroll", function () {
 let obrazek1 = document.getElementById("obrazek1");
 
 window.addEventListener("scroll", function (){
-    if (window.scrollY >= 500) {
-        obrazek1.style.animation = true;
+    if (window.scrollY >= 500 && window.scrollY <= 1200) {
+        obrazek1.style.left = "550px";
     }
     else {
-        obrazek1.style.animation = false;
+        obrazek1.style.left = "-300px";
     }
 });

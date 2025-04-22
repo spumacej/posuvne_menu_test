@@ -1,22 +1,31 @@
 * {
-    margin: 0;
+    margin: 0px;
 }
 .menu {
-    width: auto;
-    height: 100px;
     background-color: gray;
+    width: 812px;
+    height: 100px;
 } 
 .menu_default {
+    background-color: red;
     position:fixed;
     border-radius: 10px;
     height: 50px;
     width: 150px;
-    background-color: red;
     margin-top: -100px;
     opacity: 0;
     transition: opacity 0.4s ease-in-out, transform 0.4s ease-out;
     margin-left: 1500px;
     transform: translateY(-50px);
+}
+.pozadie{
+    background-color: #1E1E1E;
+    background-image: url(image.png);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: 970px;
 }
 .textik {
     text-align: center;
@@ -28,9 +37,6 @@
     background-color: blue;
     margin-top: 1000px;
     position: relative;
-    left: 550px;
-    transition: left 4s ease-in-out;
-    @starting-style {
-        left: 50px;
-    }
+    left: -300px;
+    transition: left 2s ease-in-out;
 }
