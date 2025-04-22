@@ -13,16 +13,18 @@ window.addEventListener("scroll", function () {
 });
 
 
-
 // Posuvanie obrazku z lava 
 
 let obrazek1 = document.getElementById("obrazek1");
+let obrazek2 = document.getElementById("obrazek2");
 
 window.addEventListener("scroll", function (){
-    if (window.scrollY >= 500 && window.scrollY <= 1200) {
-        obrazek1.style.left = "550px";
+    if (window.scrollY >= 1050 && window.scrollY <= 2250) {
+        obrazek1.style.left = "250px";
+        obrazek2.style.left = "450px";
     }
     else {
         obrazek1.style.left = "-300px";
+        obrazek2.style.left = "-300px";
     }
 });
