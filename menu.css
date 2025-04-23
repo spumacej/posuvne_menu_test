@@ -1,5 +1,6 @@
 * {
     margin: 0px;
+    font-family: Serif;
 }
 .menu {
     background-color: gray;
@@ -19,17 +20,41 @@
     transform: translateY(-50px);
 }
 .pozadie{
-    background-color: #1E1E1E;
-    background-image: url(image.png);
+    background-color: #2F0C07;
+    background-image: url(Pozadi1.png);
     background-repeat: no-repeat;
+    background-position: 300px 0px;
     display: flex;
     justify-content: center;
     width: auto;
-    height: 970px;
+    height: 949px;
 }
-.textik {
-    text-align: center;
+.logo{
+    background-image: url(Logo.png);
+    background-repeat: no-repeat;
+    margin-top: -900px;
+    margin-left: 50px;
+    width: 66px;
+    height: 122px;
+    top: 50px;
+    left: 50px;
+}
+.logotext{
+    padding-top: 50px;
+    padding-left: 90px;
     font-size: 20px;
+    color: white;
+}
+.vitamevas{
+    color: white;
+    position: fixed;
+    font-size: 30px;
+    margin-top: 450px;
+    margin-right: 800px;
+    margin-left: 250px;
+}
+.vitamevas .p{
+    font-size: 80px;
 }
 .obrazek1 {
     height: 300px;
@@ -48,4 +73,8 @@
     position: relative;
     left: -300px;
     transition: left 2.8s ease-in-out;
+}
+.ddd {
+    text-align: center;
+    font-size: 20px;
 }
