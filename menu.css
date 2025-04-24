@@ -1,6 +1,6 @@
 * {
     margin: 0px;
-    font-family: Serif;
+    font-family: 'Instrument Serif', serif;
 }
 .menu {
     background-color: #D9D9D9;
@@ -11,9 +11,9 @@
     border-radius: 36px;
     display: flex;
     justify-content: center;
+    align-items: center;
 } 
-.menu_text_rezervace{
-    margin-top: 27px;
+.menu_text_rezervace {
     transition: transform ease 0.15s;
     display: flex;
     margin-left: 20px;
@@ -21,7 +21,6 @@
     font-size: 25px; 
 }
 .menu_text_o_nas {
-    margin-top: 27px;
     transition: transform ease 0.15s;
     display: flex;
     margin-left: 20px;
@@ -29,7 +28,6 @@
     font-size: 25px; 
 }
 .menu_text_kontakt {
-    margin-top: 27px;
     transition: transform ease 0.15s;
     display: flex;
     margin-left: 20px;
@@ -37,7 +35,6 @@
     font-size: 25px; 
 }
 .menu_text_kostovinky{
-    margin-top: 27px;
     transition: transform ease 0.15s;
     display: flex;
     margin-left: 33px;
@@ -49,13 +46,13 @@
     background-repeat: no-repeat;
     height: 32px;
     width: 29px;
-    margin-top: 23px;
     margin-left: 2px;
     transition: transform ease 0.15s;
     display: flex;
 }
-.menu_homepage_button:hover {
+.menu_homepage_button:hover, .menu_text_kostovinky:hover, .menu_text_kontakt:hover, .menu_text_o_nas:hover, .menu_text_rezervace:hover{
     transform: scale(1.15);
+    cursor: pointer;
 }
 .menu_default {
     background-color: red;
