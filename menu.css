@@ -9,7 +9,16 @@
     opacity: 80%;
     margin-top: 50px;
     border-radius: 36px;
+    display: flex;
+    justify-content: center;
 } 
+.menutext{
+    background-image: url(Home.png);
+    background-repeat: no-repeat;
+    height: 32px;
+    width: 29px;
+    margin-right: 784px;
+}
 .menu_default {
     background-color: red;
     position:fixed;
@@ -35,12 +44,10 @@
 .logo{
     background-image: url(Logo.png);
     background-repeat: no-repeat;
-    margin-top: -900px;
+    margin-top: -910px;
     margin-left: 50px;
     width: 66px;
     height: 122px;
-    top: 50px;
-    left: 50px;
 }
 .logotext{
     padding-top: 50px;
@@ -51,7 +58,7 @@
 .vitamevas{
     color: white;
     font-size: 32px;
-    margin-top: 275px;
+    margin-top: 285px;
     margin-right: 800px;
     margin-left: 250px;
 }
