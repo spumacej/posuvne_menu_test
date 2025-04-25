@@ -13,47 +13,27 @@
     justify-content: center;
     align-items: center;
 } 
-.menu_text_rezervace {
-    transition: transform ease 0.15s;
-    display: flex;
-    margin-left: 20px;
-    margin-right: 20px;
-    font-size: 25px; 
-}
-.menu_text_o_nas {
-    transition: transform ease 0.15s;
-    display: flex;
-    margin-left: 20px;
-    margin-right: 20px;
-    font-size: 25px; 
-}
-.menu_text_kontakt {
-    transition: transform ease 0.15s;
-    display: flex;
-    margin-left: 20px;
-    margin-right: 20px;
-    font-size: 25px; 
-}
-.menu_text_kostovinky{
-    transition: transform ease 0.15s;
-    display: flex;
-    margin-left: 33px;
-    margin-right: 20px;
-    font-size: 25px; 
-}
 .menu_homepage_button{
     background-image: url(Home.png);
     background-repeat: no-repeat;
     height: 32px;
     width: 29px;
-    margin-left: 2px;
+    margin-right: 40px;
     transition: transform ease 0.15s;
     display: flex;
+}
+.menu_text_kostovinky, .menu_text_kontakt, .menu_text_o_nas, .menu_text_rezervace{
+    transition: transform ease 0.15s;
+    display: flex;
+    padding-right: 20px;
+    padding-left: 33px;
+    font-size: 30px; 
 }
 .menu_homepage_button:hover, .menu_text_kostovinky:hover, .menu_text_kontakt:hover, .menu_text_o_nas:hover, .menu_text_rezervace:hover{
     transform: scale(1.15);
     cursor: pointer;
 }
+
 .menu_default {
     background-color: red;
     position:fixed;
