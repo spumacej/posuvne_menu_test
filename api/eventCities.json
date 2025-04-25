@@ -1,0 +1,10 @@
+{
+    "eventCities": [
+        {"name": "Olomouc", "lat": 49.5938, "lon": 17.2509, "date": "2025-06-01"},
+        {"name": "Uherské Hradiště", "lat": 49.0691, "lon": 17.4596, "date": "2025-06-03"},
+        {"name": "Prostějov", "lat": 49.4724, "lon": 17.1116, "date": "2025-06-05"},
+        {"name": "Kroměříž", "lat": 49.2986, "lon": 17.3936, "date": "2025-06-07"},
+        {"name": "Hustopeče", "lat": 48.9408, "lon": 16.7376, "date": "2025-06-07"},
+        {"name": "Zlín", "lat": 49.2244, "lon": 17.6670, "date": "2025-06-10"}
+    ]
+}
