@@ -3,12 +3,12 @@
 let menu_default = document.getElementById("menu_default");
 
 window.addEventListener("scroll", function () {
-    if (window.scrollY > 99) {
+    if (window.scrollY > 129) {
         menu_default.style.opacity = "1";
         menu_default.style.transform = "translateY(0)";
     } else {
         menu_default.style.opacity = "0";
-        menu_default.style.transform = "translateY(-50px)";
+        menu_default.style.transform = "translateY(-70px)";
     }
 });
 

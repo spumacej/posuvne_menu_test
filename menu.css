@@ -22,29 +22,47 @@
     transition: transform ease 0.15s;
     display: flex;
 }
-.menu_text_kostovinky, .menu_text_kontakt, .menu_text_o_nas, .menu_text_rezervace{
+.menu_text_kostovinky, .menu_text_kontakt, .menu_text_o_nas, .menu_text_rezervace{ /*text ve velkem menu */
     transition: transform ease 0.15s;
     display: flex;
     padding-right: 20px;
     padding-left: 33px;
     font-size: 30px; 
 }
+ .menu_default_text_kostovinky, .menu_default_text_kontakt, .menu_default_text_o_nas, .menu_default_text_rezervace{ /*text v malem menu */
+    transition: transform ease 0.15s;
+    display: flex;
+    font-size: 20px; 
+}
+
 .menu_homepage_button:hover, .menu_text_kostovinky:hover, .menu_text_kontakt:hover, .menu_text_o_nas:hover, .menu_text_rezervace:hover{
     transform: scale(1.15);
     cursor: pointer;
 }
+.menu_default_text_kostovinky:hover, .menu_default_text_kontakt:hover, .menu_default_text_o_nas:hover, .menu_default_text_rezervace:hover {
+    transform: scale(1.10);
+    cursor: pointer;
+}
 
 .menu_default {
-    background-color: red;
+    background-color: #D9D9D9;
     position:fixed;
     border-radius: 10px;
-    height: 50px;
-    width: 150px;
+    height: 60px;
+    width: 100px;
     top: 0px;
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out, transform 0.4s ease-out;
-    margin-left: 1500px;
-    transform: translateY(-50px);
+    transition: opacity 0.4s ease-out,transform 0.4s ease-out;
+    right: 20px;
+    transform: translateY(-70px);
+}
+.menu_default:hover {
+}
+.menu_default_cara1, .menu_default_cara2, .menu_default_cara3 {
+    height: 5px;
+    width: 60px;
+    background-color: black;
+    margin-top: 11px;
+    margin-left: 19px;
 }
 .pozadie{
     background-color: #2F0C07;
