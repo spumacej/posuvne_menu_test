@@ -60,12 +60,26 @@ window.addEventListener("scroll", function () {
 
 
 
-
+// na to pod timhle komentarem nesahej pls 
 
 
 let menu_default_under = document.getElementById("menu_default_under");
+let menu_clicked = document.getElementById("menu_clicked")
 
 function click_menu_default ()
 {
+    menu_default.style.zIndex = "0";
+    menu_clicked.style.zIndex = "1";
+    menu_default_under.style.opacity = "1";
+    menu_default.style.opacity = "0";
+    menu_clicked.style.opacity = "1";
+    
+}
 
+function click_menu_cliked (){
+    menu_default.style.zIndex = "1";
+    menu_clicked.style.zIndex = "0";
+    menu_default_under.style.opacity = "0";
+    menu_default.style.opacity = "1";
+    menu_clicked.style.opacity = "0";
 }

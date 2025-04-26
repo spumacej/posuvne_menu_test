@@ -47,6 +47,17 @@
 .menu_default:hover {
     cursor: pointer;
 }
+.menu_clicked {
+    background-color: #2F0C07;
+    position:fixed;
+    border-radius: 10px;
+    height: 60px;
+    width: 100px;
+    top: 0px;
+    right: 20px;
+    opacity: 0;
+    z-index: 0;
+}
 
 .menu_default {
     position:fixed;
@@ -57,6 +68,7 @@
     transition: opacity 0.4s ease-out,transform 0.4s ease-out;
     right: 20px;
     transform: translateY(-70px);
+    z-index: 1;
 }
 .menu_default_under {
     background-color: black;
