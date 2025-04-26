@@ -29,7 +29,9 @@ window.addEventListener("scroll", function (){
     }
 });
 
+let menu_default_under = document.getElementById("menu_default_under");
+
 function click_menu_default ()
 {
-    
+
 }

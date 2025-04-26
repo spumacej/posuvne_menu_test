@@ -43,6 +43,9 @@
     transform: scale(1.10);
     cursor: pointer;
 }
+.menu_default:hover {
+    cursor: pointer;
+}
 
 .menu_default {
     background-color: #D9D9D9;
@@ -56,10 +59,16 @@
     transform: translateY(-70px);
 }
 .menu_default_under {
+    background-color: #D9D9D9;
+    width: 100px;
+    height: 300px;
+    top: 70px;
+    position: fixed;
     right: 20px;
-    top: 60px;
+    opacity: 0;  
+    border-radius: 10px;
 }
-.menu_default_cara1, .menu_default_cara2, .menu_default_cara3 {
+.menu_default_cara {
     height: 5px;
     width: 60px;
     background-color: black;
