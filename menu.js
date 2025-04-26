@@ -3,7 +3,7 @@
 let menu_default = document.getElementById("menu_default");
 
 window.addEventListener("scroll", function () {
-    if (window.scrollY > 129) {
+    if (window.scrollY > 64) {
         menu_default.style.opacity = "1";
         menu_default.style.transform = "translateY(0)";
     } else {
@@ -28,6 +28,40 @@ window.addEventListener("scroll", function (){
         obrazek2.style.left = "-300px";
     }
 });
+
+// Zmiznutie textu logo
+
+let logotext = document.getElementById("logo_text");
+
+window.addEventListener("scroll", function () {
+    if (window.scrollY >= 64) {
+        logotext.style.opacity = "0";
+        logotext.style.left = "40px";
+    } else {
+        logotext.style.opacity = "1";
+        logotext.style.left = "90px";
+    }
+});
+
+// Zmiznutie menu
+
+let menu = document.getElementById("menu");
+
+window.addEventListener("scroll", function () {
+    if (window.scrollY >= 64) {
+        menu.style.opacity = "0";
+    } else {
+        menu.style.opacity = "80%";
+    }
+});
+
+
+
+
+
+
+
+
 
 let menu_default_under = document.getElementById("menu_default_under");
 
