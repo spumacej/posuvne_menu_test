@@ -55,7 +55,9 @@
     right: 20px;
     transform: translateY(-70px);
 }
-.menu_default:hover {
+.menu_default_under {
+    right: 20px;
+    top: 60px;
 }
 .menu_default_cara1, .menu_default_cara2, .menu_default_cara3 {
     height: 5px;

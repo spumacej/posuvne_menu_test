@@ -28,3 +28,8 @@ window.addEventListener("scroll", function (){
         obrazek2.style.left = "-300px";
     }
 });
+
+function click_menu_default ()
+{
+    
+}
