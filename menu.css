@@ -44,11 +44,12 @@
     transform: scale(1.10);
     cursor: pointer;
 }
-.menu_default:hover {
+.menu_default:hover, .menu_clicked:hover {
     cursor: pointer;
 }
 .menu_clicked {
-    background-color: #2F0C07;
+    background-image: url(cross-svgrepo-com\ \(1\).svg);
+    background-size: 100px 60px;
     position:fixed;
     border-radius: 10px;
     height: 60px;

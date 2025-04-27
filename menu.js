@@ -3,12 +3,15 @@
 let menu_default = document.getElementById("menu_default");
 
 window.addEventListener("scroll", function () {
-    if (window.scrollY > 64) {
-        menu_default.style.opacity = "1";
-        menu_default.style.transform = "translateY(0)";
-    } else {
-        menu_default.style.opacity = "0";
-        menu_default.style.transform = "translateY(-70px)";
+    if (menu_clicked.style.opacity == 0)
+    {    
+        if (window.scrollY > 64) {
+            menu_default.style.opacity = "1";
+            menu_default.style.transform = "translateY(0)";
+        } else {
+            menu_default.style.opacity = "0";
+            menu_default.style.transform = "translateY(-70px)";
+        }
     }
 });
 
@@ -36,7 +39,7 @@ let logotext = document.getElementById("logo_text");
 window.addEventListener("scroll", function () {
     if (window.scrollY >= 64) {
         logotext.style.opacity = "0";
-        logotext.style.left = "40px";
+        logotext.style.left = "0px";
     } else {
         logotext.style.opacity = "1";
         logotext.style.left = "90px";
