@@ -40,9 +40,11 @@ window.addEventListener("scroll", function () {
     if (window.scrollY >= 64) {
         logotext.style.opacity = "0";
         logotext.style.left = "0px";
+        logotext.style.transition = "opacity 0.6s ease-out, left 0.5s ease-in";
     } else {
         logotext.style.opacity = "1";
         logotext.style.left = "90px";
+        logotext.style.transition = "opacity 0.6s ease, left 0.5s ease-out";
     }
 });
 

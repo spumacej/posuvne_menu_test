@@ -66,7 +66,7 @@
     height: 60px;
     width: 100px;
     top: 0px;
-    transition: opacity 0.4s ease-out,transform 0.4s ease-out;
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
     right: 20px;
     transform: translateY(-70px);
     z-index: 1;
@@ -112,7 +112,6 @@
     left: 90px;
     font-size: 40px;
     color: white;
-    transition: left 0.3s ease-out;
     position: relative;
 }
 .uvodny_text{
