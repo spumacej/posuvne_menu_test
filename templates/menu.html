@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="pozadie">
-        <div class="menu">
+        <div class="menu" id="menu">
             <div class="menu_homepage_button">
             </div>
             <div class="menu_text_kostovinky">
@@ -28,22 +28,29 @@
         </div>
     </div>
     <div class="logo">
-        <div class="logotext">
+        <div class="logo_text" id="logo_text">
             KOŠTOTÉKA
         </div>
     </div>
-    <div class="vitamevas">
+    <div class="uvodny_text">
         Vitame Vas
         <div class="p">KOŠTOTÉKA</div>
         Pizzéria situovaná v rekreačnej oblasti Gazárka v malom mestečku 
         Šaštín - Stráže na Záhorí.
     </div>
-    <div class="menu_default" id="menu_default">
+    <div class="menu_default" id="menu_default" onclick="click_menu_default()"> 
+        <div class="menu_default_cara"></div>
+        <div class="menu_default_cara"></div>
+        <div class="menu_default_cara"></div>
+    </div>
+    <div class="menu_default_under" id="menu_default_under"></div>
+    <div class="menu_clicked" id="menu_clicked" onclick="click_menu_cliked()">
     </div>
     <div class="obrazek1" id="obrazek1">
     </div>
     <div class="obrazek2" id="obrazek2">
     </div>
+    <!-- <h1>Find Closest Cities</h1>
 
     <h1>Find Closest Cities</h1>
 
@@ -68,9 +75,14 @@
                 </li>
             {% endfor %}
         </ul>
+<<<<<<< HEAD:templates/menu.html
     {% endif %}
 
     <div class="ddd">
+=======
+    {% endif %} -->
+    <div class="ddd"> 
+>>>>>>> 24ad919999c8fe6b977550738c8636189abdb0a6:menu.html
     d<br>
     d<br>
     d<br>
