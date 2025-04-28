@@ -66,7 +66,7 @@ def index():
             print("Nearby Cities:", nearby_cities)
 
     return render_template(
-        'index.html',
+        'menu.html',
         cities=datalist_cities,
         selected_city=selected_city,
         nearby_cities=nearby_cities

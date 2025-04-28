@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='menu.css') }}">
+    <script src="{{ url_for('static', filename='menu.js') }}"></script>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -44,11 +45,30 @@
     <div class="obrazek2" id="obrazek2">
     </div>
 
+    <h1>Find Closest Cities</h1>
+
     <form method="POST">
-        <label for="userPos">Enter something:</label>
-        <input type="text" id="userPos" name="userPos" required>
-        <button type="submit">Submit</button>
+        <label for="selectedCity">Search for your city:</label>
+        <input list="cities" name="selectedCity" id="selectedCity" placeholder="Start typing a city..." required>
+        <datalist id="cities">
+            {% for city in cities %}
+                <option value="{{ city.name }}">
+            {% endfor %}
+        </datalist>
+        <button type="submit">Find</button>
     </form>
+
+    {% if nearby_cities %}
+        <h2>Closest Event Cities to {{ selected_city.name }}:</h2>
+        <ul>
+            {% for city in nearby_cities %}
+                <li>
+                    {{ city.name }} ({{ city.distance | round(2) }} km) —
+                    Event Date: {{ city.date }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
 
     <div class="ddd">
     d<br>
@@ -140,6 +160,5 @@
     d<br>
     d<br>
     </div>
-    <script src="menu.js"></script>
 </body>
 </html>
