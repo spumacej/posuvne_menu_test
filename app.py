@@ -3,7 +3,8 @@ from geopy.distance import geodesic
 import json
 from datetime import datetime
 
-app = Flask(__name__)
+# app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 
 # Load cities with coordinates and events from JSON
 with open('api/eventCities.json', 'r', encoding='utf-8') as f:

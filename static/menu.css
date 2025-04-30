@@ -89,10 +89,9 @@
     margin-left: 19px;
 }
 .pozadie{
-    background-color: #2F0C07;
     background-image: url(Pozadi1.png);
     background-repeat: no-repeat;
-    background-position: 300px 0px;
+    background-size: 1920px 940px;
     display: flex;
     justify-content: center;
     width: auto;

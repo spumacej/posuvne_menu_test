@@ -1,3 +1,4 @@
+console.log("menu.js sa načítal a spustil!");
 // Posuvanie menu dole a hore
 
 let menu_default = document.getElementById("menu_default");
