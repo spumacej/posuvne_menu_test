@@ -3,8 +3,7 @@
 let menu_default = document.getElementById("menu_default");
 
 window.addEventListener("scroll", function () {
-    if (menu_clicked.style.opacity == 0)
-    {    
+    if (menu_clicked.style.opacity == 0) {
         if (window.scrollY > 64) {
             menu_default.style.opacity = "1";
             menu_default.style.transform = "translateY(0)";
