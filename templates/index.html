@@ -1,9 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Find Closest Cities</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/menu.css">
+    <script src="/static/menu.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="pozadie">
+        <div class="menu" id="menu">
+            <div class="menu_homepage_button">
+            </div>
+            <div class="menu_text_kostovinky">
+                KOŠTOVINKY 
+            </div>
+            <div class="menu_text_rezervace">
+                REZERVACE
+            </div>
+            <div class="menu_text_o_nas">
+                O NÁS
+            </div>
+            <div class="menu_text_kontakt">
+                KONTAKT
+            </div>
+        </div>
+    </div>
+    <div class="logo">
+        <div class="logo_text" id="logo_text">
+            KOŠTOTÉKA
+        </div>
+    </div>
+    <div class="uvodny_text">
+        Vitame Vas
+        <div class="p">KOŠTOTÉKA</div>
+        Pizzéria situovaná v rekreačnej oblasti Gazárka v malom mestečku 
+        Šaštín - Stráže na Záhorí.
+    </div>
+    <div class="menu_default" id="menu_default" onclick="click_menu_default()"> 
+        <div class="menu_default_cara"></div>
+        <div class="menu_default_cara"></div>
+        <div class="menu_default_cara"></div>
+    </div>
+    <div class="menu_default_under" id="menu_default_under"></div>
+    <div class="menu_clicked" id="menu_clicked" onclick="click_menu_cliked()">
+    </div>
+    <div class="obrazek1" id="obrazek1">
+    </div>
+    <div class="obrazek2" id="obrazek2">
+    </div>
     <h1>Find Closest Cities</h1>
 
     <form method="POST">
@@ -28,5 +74,97 @@
             {% endfor %}
         </ul>
     {% endif %}
+
+    <!-- 
+    <div class="ddd">
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    v<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d <br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    v<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d <br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    v<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d <br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    v<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    d<br>
+    </div>
 </body>
 </html>

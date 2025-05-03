@@ -4,52 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/static/menu.css">
-    <script src="/static/menu.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="pozadie">
-        <div class="menu" id="menu">
-            <div class="menu_homepage_button">
-            </div>
-            <div class="menu_text_kostovinky">
-                KOŠTOVINKY 
-            </div>
-            <div class="menu_text_rezervace">
-                REZERVACE
-            </div>
-            <div class="menu_text_o_nas">
-                O NÁS
-            </div>
-            <div class="menu_text_kontakt">
-                KONTAKT
+<body class="m-0 flex justify-center flex-col">
+    <section class="bg-[#2F0C07] flex justify-center flex-col">
+        <div class="absolute top-11 left-20 flex items-center text-4xl text-white">
+            <img src="/static/Logo.png" class="h-32 mr-5">
+            Kostoteka
+        </div>
+        <div class="h-20 mt-20 border rounded-full flex justify-center items-center bg-gray-400 w-[800px] self-center">
+            <div class="">
+                <ul class="flex space-x-16 items-center font-medium text-2xl">   
+                    <li><img src="/static/Home.png" class="h-fit w-fit"></li>
+                    <li>Rezervacia</li>
+                    <li>Kostovinka</li>
+                    <li>O nas</li>
+                    <li>Kontakt</li>
+                </ul>
             </div>
         </div>
-    </div>
-    <div class="logo">
-        <div class="logo_text" id="logo_text">
-            KOŠTOTÉKA
+        
+        <div class="flex flex-col ml-52 mt-64 mb-80 text-white">
+            <p class="text-4xl">Vitame vas</p>
+            <p class="text-9xl">Kostoteka</p>
+            <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
         </div>
-    </div>
-    <div class="uvodny_text">
-        Vitame Vas
-        <div class="p">KOŠTOTÉKA</div>
-        Pizzéria situovaná v rekreačnej oblasti Gazárka v malom mestečku 
-        Šaštín - Stráže na Záhorí.
-    </div>
-    <div class="menu_default" id="menu_default" onclick="click_menu_default()"> 
-        <div class="menu_default_cara"></div>
-        <div class="menu_default_cara"></div>
-        <div class="menu_default_cara"></div>
-    </div>
-    <div class="menu_default_under" id="menu_default_under"></div>
-    <div class="menu_clicked" id="menu_clicked" onclick="click_menu_cliked()">
-    </div>
-    <div class="obrazek1" id="obrazek1">
-    </div>
-    <div class="obrazek2" id="obrazek2">
-    </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
     <h1>Find Closest Cities</h1>
 
     <form method="POST">
@@ -57,15 +51,15 @@
         <input list="cities" name="selectedCity" id="selectedCity" placeholder="Start typing a city..." required>
         <datalist id="cities">
             {% for city in cities %}
-                <option value="{{ city.name }}">
-            {% endfor %}
-        </datalist>
-        <button type="submit">Find</button>
+            <option value="{{ city.name }}">
+                {% endfor %}
+            </datalist>
+            <button type="submit">Find</button>
     </form>
 
     {% if nearby_cities %}
-        <h2>Closest Event Cities to {{ selected_city.name }}:</h2>
-        <ul>
+    <h2>Closest Event Cities to {{ selected_city.name }}:</h2>
+    <ul>
             {% for city in nearby_cities %}
                 <li>
                     {{ city.name }} ({{ city.distance | round(2) }} km) —
@@ -73,98 +67,8 @@
                 </li>
             {% endfor %}
         </ul>
-    {% endif %}
-
-    <!-- 
-    <div class="ddd">
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    v<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d <br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    v<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d <br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    v<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d <br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    v<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    d<br>
-    </div>
+        {% endif %}
+        
+    <script src="/static/menu.js"></script>
 </body>
 </html>
