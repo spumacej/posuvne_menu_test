@@ -112,6 +112,7 @@
     font-size: 40px;
     color: white;
     position: relative;
+    text-shadow: 10px 4px 4px #000000;
 }
 .uvodny_text{
     color: white;
@@ -144,4 +145,14 @@
 .ddd {
     text-align: center;
     font-size: 20px;
+}
+.pozadie2 {
+    background-image: url(Pozadi2.png);
+    background-repeat: no-repeat;
+    background-size: 1920px 940px;
+    background-position: 0px 198px;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: 949px;
 }
