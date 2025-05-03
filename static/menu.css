@@ -149,10 +149,9 @@
 .pozadie2 {
     background-image: url(Pozadi2.png);
     background-repeat: no-repeat;
-    background-size: 1920px 940px;
     background-position: 0px 198px;
     display: flex;
     justify-content: center;
     width: auto;
-    height: 949px;
+    height: 1180px;
 }
