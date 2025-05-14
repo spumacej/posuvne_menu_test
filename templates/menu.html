@@ -1,74 +1,209 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kostoteka</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/static/menu.css">
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" rel="stylesheet">
 </head>
-<body class="m-0 flex justify-center flex-col">
-    <section class="bg-[#2F0C07] flex justify-center flex-col">
-        <div class="absolute top-11 left-20 flex items-center text-4xl text-white">
-            <img src="/static/Logo.png" class="h-32 mr-5">
-            Kostoteka
-        </div>
-        <div class="h-20 mt-20 border rounded-full flex justify-center items-center bg-gray-400 w-[800px] self-center">
-            <div class="">
-                <ul class="flex space-x-16 items-center font-medium text-2xl">   
-                    <li><img src="/static/Home.png" class="h-fit w-fit"></li>
-                    <li>Rezervacia</li>
-                    <li>Kostovinka</li>
-                    <li>O nas</li>
-                    <li>Kontakt</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="flex flex-col ml-52 mt-64 mb-80 text-white">
-            <p class="text-4xl">Vitame vas</p>
-            <p class="text-9xl">Kostoteka</p>
-            <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+<body class="m-0 flex flex-col justify-center bg-[#2F0C07]">
+
+    <!-- LOGO -->
+    <div id="logo_text" class="absolute top-11 left-20 flex items-center text-4xl text-white transition-all font-['Instrument_Serif']">
+        <img src="/static/Logo.png" class="h-32 mr-5" alt="Logo">
+        Kostoteka
+    </div>
+
+    <!-- MENU DEFAULT -->
+    <div id="menu_default" class="h-20 top-20 border rounded-full hidden justify-center items-center bg-gray-400 w-[800px] mx-auto opacity-80 transition-all fixed left-1/2 -translate-x-1/2 z-10 md:flex">
+        <ul class="flex space-x-16 items-center font-medium text-2xl">
+            <li class="hover:scale-105 ease duration-150">
+                <a href="/home">
+                    <img src="/static/Home.png" class="h-6 w-6" alt="Home">
+                </a>
+            </li>
+            <li class="hover:scale-105 ease duration-150">
+                <a href="/rezervacia">Rezervacia</a>
+            </li>
+            <li class="hover:scale-105 ease duration-150">
+                <a href="/kostovinka">Kostovinka</a>
+            </li>
+            <li class="hover:scale-105 ease duration-150">
+                <a href="/onas">O nas</a>
+            </li>
+            <li class="hover:scale-105 ease duration-150">
+                <a href="/kontakt">Kontakt</a>
+            </li>
+            
+        </ul>
+    </div>
+
+    <!-- HAMBURGER IKONA PRE MOBIL -->
+    <div class="fixed top-5 right-5 z-20">
+        <button id="hamburger_btn" class="text-white focus:outline-none hidden">    
+            <!-- Ikona hamburger -->
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- DROPDOWN MENU (skryté default) -->
+    <div id="dropdown_menu" class="fixed top-20 right-5 bg-gray-700 text-white rounded-lg shadow-lg py-4 px-6 hidden flex-col space-y-4 z-30 md:hidden">
+        <a href="#" class="block">Rezervacia</a>
+        <a href="#" class="block">Kostovinka</a>
+        <a href="#" class="block">O nas</a>
+        <a href="#" class="block">Kontakt</a>
+    </div>
+
+    <!-- HLAVNÝ TEXT -->
+    <div class="flex flex-col ml-52 mt-64 mb-80 text-white font-['Instrument_Serif']">
+        <p class="text-4xl">Vítame Vás</p>
+        <p class="text-9xl">KOSTOTEKA</p>
+        <p class="text-lg">Pizzéria situovaná v rekreačnej oblasti Gazárka v malom mestečku Šaštín – Stráže na Záhorí.</p>
+    </div>
+
+    <!-- SEKCIA OBRÁZKOV -->
+    <section class="bg-[#3b2a23] py-20 px-10 w-full relative min-h-[1000px]">
+        <img id="obrazek1" src="/static/wine1.png" alt="Wine Glass"
+             class="absolute top-20 left-[-300px] rounded-lg shadow-lg w-80 h-60 object-cover transition-all duration-500">
+        <img id="obrazek2" src="/static/wine2.png" alt="Pouring Wine"
+             class="absolute top-96 left-[-300px] rounded-lg shadow-lg w-80 h-60 object-cover transition-all duration-500">
+        <div class="flex flex-col justify-center text-white text-xl leading-relaxed whitespace-pre ml-[500px]">
+            <p>feasdvydsvdv</p>
+            <p>svd</p>
+            <p>sv</p>
+            <p>d</p>
+            <p>dddddddddddddddd</p>
+            <p>dddddddddddddddd</p>
+            <p>dddddddddddddddd</p>
+            <p>svd</p>
+            <p>v</p>
+            <p>dsvdsvvdsvdsvds</p>
         </div>
     </section>
 
-
-
-
-
-
-
-
-
-
-
-
-    <h1>Find Closest Cities</h1>
-
-    <form method="POST">
-        <label for="selectedCity">Search for your city:</label>
-        <input list="cities" name="selectedCity" id="selectedCity" placeholder="Start typing a city..." required>
-        <datalist id="cities">
-            {% for city in cities %}
-            <option value="{{ city.name }}">
+    <!-- FORM -->
+    <section class="bg-white text-black py-10 px-5">
+        <h1 class="text-3xl font-bold mb-4">Find Closest Cities</h1>
+        <form method="POST" class="space-y-4">
+            <label for="selectedCity" class="block text-lg">Search for your city:</label>
+            <input list="cities" name="selectedCity" id="selectedCity" placeholder="Start typing a city..." required
+                   class="border px-4 py-2 w-full rounded">
+            <datalist id="cities">
+                {% for city in cities %}
+                <option value="{{ city.name }}">
                 {% endfor %}
             </datalist>
-            <button type="submit">Find</button>
-    </form>
+            <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Find</button>
+        </form>
 
-    {% if nearby_cities %}
-    <h2>Closest Event Cities to {{ selected_city.name }}:</h2>
-    <ul>
+        {% if nearby_cities %}
+        <h2 class="text-2xl font-semibold mt-6">Closest Event Cities to {{ selected_city.name }}:</h2>
+        <ul class="list-disc pl-5">
             {% for city in nearby_cities %}
-                <li>
-                    {{ city.name }} ({{ city.distance | round(2) }} km) —
-                    Event Date: {{ city.date }}
-                </li>
+            <li>{{ city.name }} ({{ city.distance | round(2) }} km) — Event Date: {{ city.date }}</li>
             {% endfor %}
         </ul>
         {% endif %}
-        
-    <script src="/static/menu.js"></script>
+    </section>
+
+    <!-- TVOJ JAVASCRIPT -->
+    <script>
+    console.log("menu.js sa načítal a spustil!");
+
+    let menu_default = document.getElementById("menu_default");
+    let menu_clicked = document.getElementById("menu_clicked");
+    let menu_default_under = document.getElementById("menu_default_under");
+
+    let obrazek1 = document.getElementById("obrazek1");
+    let obrazek2 = document.getElementById("obrazek2");
+
+    let logotext = document.getElementById("logo_text");
+    let menu = document.getElementById("menu");
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 100) {
+            menu_default.style.opacity = "0";
+        } else {
+            menu_default.style.opacity = "1";
+        }
+    });
+
+
+    window.addEventListener("scroll", function (){
+        if (window.scrollY >= 500 && window.scrollY <= 2250) {
+            obrazek1.style.left = "250px";
+            obrazek2.style.left = "450px";
+        } else {
+            obrazek1.style.left = "-300px";
+            obrazek2.style.left = "-300px";
+        }
+    });
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY >= 64) {
+            logotext.style.opacity = "0";
+            logotext.style.left = "0px";
+            logotext.style.transition = "opacity 0.6s ease-out, left 0.5s ease-in";
+        } else {
+            logotext.style.opacity = "1";
+            logotext.style.left = "90px";
+            logotext.style.transition = "opacity 0.6s ease, left 0.5s ease-out";
+        }
+    });
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY >= 100) {
+            menu.style.opacity = "0";
+        } else {
+            menu.style.opacity = "80%";
+        }
+    });
+
+    function click_menu_default ()
+    {
+        menu_default.style.zIndex = "0";
+        menu_clicked.style.zIndex = "1";
+        menu_default_under.style.opacity = "1";
+        menu_default.style.opacity = "0";
+        menu_clicked.style.opacity = "1";
+    }
+
+    function click_menu_cliked (){
+        menu_default.style.zIndex = "1";
+        menu_clicked.style.zIndex = "0";
+        menu_default_under.style.opacity = "0";
+        menu_default.style.opacity = "1";
+        menu_clicked.style.opacity = "0";
+    }
+
+    // NOVÝ JS PRE HAMBURGER
+    document.addEventListener("DOMContentLoaded", function () {
+        const hamburgerBtn = document.getElementById("hamburger_btn");
+        const menuDefault = document.getElementById("menu_default");
+        const dropdownMenu = document.getElementById("dropdown_menu");
+
+        // Ensure the scroll event is managed properly
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 100) { // Po prekročení 100px sa ikona zobrazí a navbar zmizne
+                hamburgerBtn.classList.remove("hidden");
+                menuDefault.classList.add("hidden"); // Skryje navbar
+            } else {
+                hamburgerBtn.classList.add("hidden");
+                menuDefault.classList.remove("hidden"); // Zobrazí navbar späť
+            }
+        });
+
+            // Toggle dropdown menu on hamburger button click
+        if (hamburgerBtn) {
+            hamburgerBtn.addEventListener("click", () => {
+                dropdownMenu.classList.toggle("hidden");
+            });
+        }
+    });
+    </script>
 </body>
 </html>
